@@ -12,7 +12,6 @@ WEBHOOK_URL = "https://bandishtijiya.app.n8n.cloud/webhook-test/finance"
 # 🧠 Extract amount & people
 def extract_data(text):
     text_lower = text.lower()
-
     # amount
     numbers = re.findall(r'\d+', text_lower)
     amount = int(numbers[0]) if numbers else 0
